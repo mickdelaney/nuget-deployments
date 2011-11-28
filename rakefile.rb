@@ -71,7 +71,7 @@ namespace :nuget do
 	   nuget.command     = NUGET
 	   nuget.nuspec      = File.join(OUTPUT_DIR, NUPSEC_FILE)
 	   # nuget.base_folder = OUTPUT_DIR + '/'
-	   # nuget.output      = OUTPUT_DIR + '/'
+	   nuget.output      = OUTPUT_DIR
 	end
 	
 end
