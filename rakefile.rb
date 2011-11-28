@@ -9,6 +9,7 @@ WEB_OUTPUT = File.join(Dir.pwd, OUTPUT_DIR, 'Site')
 NUPSEC_FILE = 'mvcweb.nuspec'
 NUSPEC_FILES_PATTERN = 'site\**\*.*'
 
+@version = ENV["VERSION"] || '1.0.0.0'
 @config = ENV["CONFIG"] || 'Debug'
 
 desc "deploy web"
@@ -53,8 +54,8 @@ namespace :nuget do
 	desc "create the nuget package"
 	nuspec :spec do |nuspec|
 	   nuspec.id="mvcweb"
-	   nuspec.version = "1.0.0"
-	   nuspec.authors = "elevate"
+	   nuspec.version = @version
+	   nuspec.authors = "me"
 	   nuspec.description = "mvc web is a webapplication"
 	   nuspec.title = "mvc web"
 	   nuspec.language = "en-US"
